@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -15,3 +16,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "MIITest"
 include(":app")
+include(":core:model")
+include(":core:designsystem")
+include(":core:ui")
+include(":core:common")
+include(":core:network")
+include(":logger")
