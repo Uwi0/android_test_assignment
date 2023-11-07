@@ -15,6 +15,14 @@ import com.kakapo.designsystem.component.button.CustomIconButton
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
+fun CustomTopAppbar(title: String){
+    Surface(shadowElevation = 2.dp, tonalElevation = 2.dp) {
+        TopAppBar(title = { Text(text = title) })
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
 fun CustomDrawerTopAppBar(title: String, onClick: Func) {
     Surface(shadowElevation = 2.dp, tonalElevation = 2.dp) {
         TopAppBar(

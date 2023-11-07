@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MIITest</string>
+    <string name="your_balance">You\'re Balance</string>
+    <string name="currency">Rp %s</string>
+    <string name="history_transaction">History Transaction</string>
+    <string name="add_transaction">Add Transaction</string>
+    <string name="confirm">Confirm</string>
+    <string name="transaction_confirmation">Are you sure want to proceed this transaction ?</string>
 </resources>

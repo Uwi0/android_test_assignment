@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
-private val VipeDarkColorScheme = darkColorScheme(
+private val AppDarkColorScheme = darkColorScheme(
     primary = Blue80,
     onPrimary = Blue20,
     primaryContainer = Blue30,
@@ -41,7 +41,7 @@ private val VipeDarkColorScheme = darkColorScheme(
     outline = BlueGrey60
 )
 
-private val VipeLightColorScheme = lightColorScheme(
+private val AppLightColorScheme = lightColorScheme(
     primary = Blue40,
     onPrimary = Color.White,
     primaryContainer = Blue90,
@@ -72,7 +72,7 @@ private val VipeLightColorScheme = lightColorScheme(
 
 @SuppressLint("NewApi")
 @Composable
-fun VipeTheme(
+fun AppTheme(
     isDarkTheme: Boolean = isSystemInDarkTheme(),
     isDynamicColor: Boolean = true,
     content: @Composable () -> Unit
@@ -87,8 +87,8 @@ fun VipeTheme(
             dynamicLightColorScheme(LocalContext.current)
         }
 
-        isDarkTheme -> VipeDarkColorScheme
-        else -> VipeLightColorScheme
+        isDarkTheme -> AppDarkColorScheme
+        else -> AppLightColorScheme
     }
 
     MaterialTheme(

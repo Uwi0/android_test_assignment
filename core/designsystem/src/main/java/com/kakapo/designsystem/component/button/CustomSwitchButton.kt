@@ -5,7 +5,7 @@ import androidx.compose.material3.Switch
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.kakapo.designsystem.ThemePreviews
-import com.kakapo.designsystem.theme.VipeTheme
+import com.kakapo.designsystem.theme.AppTheme
 
 @Composable
 fun CustomSwitchButton(
@@ -23,7 +23,7 @@ fun CustomSwitchButton(
 @ThemePreviews
 @Composable
 private fun CustomToggleButtonPrev() {
-    VipeTheme {
+    AppTheme {
         CustomSwitchButton(modifier = Modifier.fillMaxWidth(), checked = true) {}
     }
 }

@@ -76,7 +76,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kakapo.designsystem.R
 import com.kakapo.designsystem.component.FunctionalityNotAvailablePopup
-import com.kakapo.designsystem.theme.VipeTheme
+import com.kakapo.designsystem.theme.AppTheme
 
 enum class InputSelector {
     NONE,
@@ -95,7 +95,7 @@ enum class EmojiStickerSelector {
 @Preview
 @Composable
 fun UserInputPreview() {
-    VipeTheme {
+    AppTheme {
         UserInput(onMessageSent = {})
     }
 }

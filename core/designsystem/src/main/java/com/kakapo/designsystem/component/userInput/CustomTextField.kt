@@ -18,7 +18,7 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.kakapo.common.type.Func
-import com.kakapo.designsystem.theme.VipeTheme
+import com.kakapo.designsystem.theme.AppTheme
 
 @Composable
 fun CustomOutlinedTextField(
@@ -116,7 +116,7 @@ object CustomTextFieldDefault {
 @Preview
 @Composable
 private fun CustomTextFieldPrev() {
-    VipeTheme {
+    AppTheme {
         CustomTextField(placeHolder = "PlaceHolder", value = "", onValueChange = {})
     }
 }

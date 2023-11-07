@@ -18,7 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.kakapo.designsystem.ThemePreviews
-import com.kakapo.designsystem.theme.VipeTheme
+import com.kakapo.designsystem.theme.AppTheme
 
 @Composable
 fun CustomNavigationBar(
@@ -77,7 +77,7 @@ fun NiaNavigationPreview() {
         Icons.Default.Grid3x3,
     )
 
-    VipeTheme {
+    AppTheme {
         CustomNavigationBar {
             items.forEachIndexed { index, item ->
                 CustomNavigationBarItem(

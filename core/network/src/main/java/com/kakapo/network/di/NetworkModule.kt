@@ -1,6 +1,5 @@
 package com.kakapo.network.di
 
-import com.kakapo.common.BuildConfig
 import com.kakapo.network.interceptor.HeaderInterceptor
 import com.kakapo.network.interceptor.LoggingInterceptor
 import com.kakapo.network.utils.ApiConstants
@@ -8,6 +7,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import id.co.jarvis.logger.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

@@ -22,7 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import com.kakapo.designsystem.ThemePreviews
-import com.kakapo.designsystem.theme.VipeTheme
+import com.kakapo.designsystem.theme.AppTheme
 
 
 @Composable
@@ -203,7 +203,7 @@ object CustomButtonDefaults {
 @ThemePreviews
 @Composable
 private fun CustomButtonPrev() {
-    VipeTheme {
+    AppTheme {
         CustomButton(
             text = { Text(text = "Example") },
             leadingIcon = { Icon(imageVector = Icons.Default.Add, contentDescription = null) },
@@ -215,7 +215,7 @@ private fun CustomButtonPrev() {
 @ThemePreviews
 @Composable
 private fun CustomOutlinedButtonPrev() {
-    VipeTheme {
+    AppTheme {
         Surface {
             CustomOutlinedButton(
                 text = { Text(text = "Example") },
@@ -229,7 +229,7 @@ private fun CustomOutlinedButtonPrev() {
 @ThemePreviews
 @Composable
 private fun CustomTextButtonPrev() {
-    VipeTheme {
+    AppTheme {
         Surface {
             CustomTextButton(
                 text = { Text(text = "Example") },

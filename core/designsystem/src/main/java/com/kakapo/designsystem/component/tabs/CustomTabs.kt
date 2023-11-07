@@ -16,7 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.kakapo.designsystem.ThemePreviews
-import com.kakapo.designsystem.theme.VipeTheme
+import com.kakapo.designsystem.theme.AppTheme
 
 @Composable
 fun CustomTab(
@@ -68,7 +68,7 @@ fun CustomTabRow(
 @ThemePreviews
 @Composable
 fun TabsPreview() {
-    VipeTheme {
+    AppTheme {
         val titles = listOf("TabA", "TabB")
         Surface {
             CustomTabRow(selectedTabIndex = 0) {
