@@ -31,6 +31,7 @@ import com.kakapo.common.utils.showLongToast
 import com.kakapo.designsystem.component.topAppBar.CustomTopAppbar
 import com.kakapo.miitest.R
 import com.kakapo.miitest.feature.home.component.DialogTransactionConfirmation
+import com.kakapo.miitest.feature.home.component.QrCodeScannerScreen
 
 @Composable
 fun HomeRoute(viewModel: HomeViewModel = hiltViewModel()) {
@@ -48,10 +49,7 @@ fun HomeRoute(viewModel: HomeViewModel = hiltViewModel()) {
     HomeScreen(uiState = uiState, onAddTransaction = viewModel::scanQrCode)
 
     if (uiState.isDialogVisible) {
-        DialogTransactionConfirmation(
-            onDismiss = {},
-            onConfirm = {}
-        )
+        QrCodeScannerScreen()
     }
 }
 

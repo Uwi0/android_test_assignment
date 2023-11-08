@@ -31,6 +31,7 @@ androidxUiAutomator = "2.2.0"
 androidxWindowManager = "1.1.0"
 androidxWork = "2.8.1"
 arrow = "1.2.0"
+cameraxVersion = "1.3.0"
 converterGson = "2.9.0"
 coil = "2.3.0"
 codeScaner = "16.1.0"
@@ -69,6 +70,8 @@ turbine = "0.12.3"
 kotlin1910 = "1.9.10"
 junit = "1.1.5"
 material = "1.10.0"
+zXing = "3.3.3"
+playServicesMlkitBarcodeScanning = "18.3.0"
 
 [libraries]
 accompanist-navigation = { group = "com.google.accompanist", name = "accompanist-navigation-animation", version.ref = "accompanist-navigation" }
@@ -81,6 +84,10 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppCompat" }
 androidx-benchmark-macro = { group = "androidx.benchmark", name = "benchmark-macro-junit4", version.ref = "androidxMacroBenchmark" }
 androidx-browser = { group = "androidx.browser", name = "browser", version.ref = "androidxBrowser" }
+androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "cameraxVersion"}
+androidx-camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "cameraxVersion"}
+androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraxVersion"}
+androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraxVersion"}
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
 androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
 androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
@@ -173,6 +180,7 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 serpro69-faker = { group = "io.github.serpro69", name = "kotlin-faker", version.ref = "kotlin-faker" }
 timber-logging = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+zXing-core = { group = "com.google.zxing", name = "core", version.ref = "zXing"}
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
@@ -180,6 +188,7 @@ kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-pl
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+play-services-mlkit-barcode-scanning = { group = "com.google.android.gms", name = "play-services-mlkit-barcode-scanning", version.ref = "playServicesMlkitBarcodeScanning" }
 
 
 [plugins]

@@ -29,13 +29,7 @@ class HomeViewModel @Inject constructor(
     private val _uiSideEffect = MutableSharedFlow<HomeSideEffect>()
 
     fun scanQrCode() = viewModelScope.launch {
-        val showDialogConfirmation = { code: String ->
-            _uiState.update { it.updateSuccessScanned(code) }
-        }
-        scanCodeUseCase.starScanning().asResult().subscribe(
-            onSuccess = showDialogConfirmation,
-            onError = ::handleError
-        )
+        _uiState.update { it.copy(isDialogVisible = true) }
 
     }
 

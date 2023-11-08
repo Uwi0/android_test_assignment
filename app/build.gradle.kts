@@ -9,12 +9,9 @@ plugins {
 
 android {
     namespace = "com.kakapo.miitest"
-    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.kakapo.miitest"
-        minSdk = 24
-        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -63,4 +60,12 @@ dependencies {
     implementation(libs.androidx.window.manager)
     implementation(libs.androidx.profileinstaller)
     implementation(libs.accompanist.navigation)
+
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.core)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.androidx.camera.view)
+    implementation(libs.zXing.core)
+    implementation(libs.google.play.service.code.scanner)
+    implementation(libs.play.services.mlkit.barcode.scanning)
 }
