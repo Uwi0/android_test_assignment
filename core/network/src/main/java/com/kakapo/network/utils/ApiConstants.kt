@@ -1,6 +1,9 @@
 package com.kakapo.network.utils
 
 object ApiConstants {
-    const val BaseUrlOpenAI = "https://api.openai.com/"
-    const val TextCompletionsEndpoint = "v1/chat/completions"
+    const val BaseUrlPromoApi = "https://content.digi46.id/"
+}
+
+object ApiUrl{
+    const val PROMOS = "promos"
 }

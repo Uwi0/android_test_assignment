@@ -1,6 +1,6 @@
 package com.kakapo.network.di
 
-import com.kakapo.network.api.ChatGptApi
+import com.kakapo.network.api.PromoApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,8 +14,8 @@ object ApiModule {
 
     @Singleton
     @Provides
-    fun providesChatGpt(builder: Retrofit.Builder): ChatGptApi {
-        return builder.build().create(ChatGptApi::class.java)
+    fun providesChatGpt(builder: Retrofit.Builder): PromoApi{
+        return builder.build().create(PromoApi::class.java)
     }
 
 }

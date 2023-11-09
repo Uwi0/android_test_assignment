@@ -43,7 +43,7 @@ object NetworkModule {
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit.Builder {
         return Retrofit.Builder()
-            .baseUrl(ApiConstants.BaseUrlOpenAI)
+            .baseUrl(ApiConstants.BaseUrlPromoApi)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
     }
