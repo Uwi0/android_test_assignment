@@ -31,7 +31,6 @@ import com.kakapo.common.utils.showLongToast
 import com.kakapo.designsystem.component.topAppBar.CustomTopAppbar
 import com.kakapo.miitest.R
 import com.kakapo.miitest.feature.home.component.DialogTransactionConfirmation
-import com.kakapo.miitest.feature.home.component.QrCodeScannerScreen
 
 @Composable
 fun HomeRoute(viewModel: HomeViewModel = hiltViewModel()) {
@@ -40,7 +39,7 @@ fun HomeRoute(viewModel: HomeViewModel = hiltViewModel()) {
 
     LaunchedEffect(key1 = Unit) {
         viewModel.uiSideEffect.collect { effect ->
-            when (effect){
+            when (effect) {
                 is ShowError -> context.showLongToast(effect.message)
             }
         }
@@ -49,7 +48,10 @@ fun HomeRoute(viewModel: HomeViewModel = hiltViewModel()) {
     HomeScreen(uiState = uiState, onAddTransaction = viewModel::scanQrCode)
 
     if (uiState.isDialogVisible) {
-        QrCodeScannerScreen()
+        DialogTransactionConfirmation(
+            onDismiss = viewModel::dismissDialog,
+            onConfirm = viewModel::proceedTransaction
+        )
     }
 }
 
@@ -81,7 +83,15 @@ fun HomeScreen(uiState: HomeUiState, onAddTransaction: Func) {
                 LazyColumn(
                     content = {
                         items(uiState.transactionHistories) { transaction ->
-
+                            Row(modifier = Modifier
+                                .fillMaxSize()
+                                .padding(12.dp), horizontalArrangement = Arrangement.SpaceBetween) {
+                                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                                    Text(text = transaction.accountName, style = MaterialTheme.typography.titleMedium)
+                                    Text(text = transaction.merchantName)
+                                }
+                                Text(text = "Rp ${transaction.amount}")
+                            }
                         }
                     }
                 )
@@ -90,6 +100,7 @@ fun HomeScreen(uiState: HomeUiState, onAddTransaction: Func) {
         floatingActionButton = {
             FloatingActionButton(onClick = onAddTransaction) {
                 Row(
+                    modifier = Modifier.padding(horizontal = 12.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {

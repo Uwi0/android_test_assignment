@@ -16,7 +16,7 @@ internal fun DialogTransactionConfirmation(onDismiss: Func, onConfirm: Func) {
         onDismissRequest = onDismiss,
         confirmButton = {
             CustomButton(
-                onClick = { onConfirm.invoke(); onDismiss.invoke() },
+                onClick = onConfirm,
                 content = { Text(text = stringResource(id = R.string.confirm)) }
             )
         },

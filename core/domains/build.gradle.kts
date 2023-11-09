@@ -11,6 +11,7 @@ dependencies {
     implementation(project(":core:model"))
     implementation(project(":core:data"))
     implementation(project(":core:common"))
+    implementation(project(":core:test"))
 
     implementation(libs.google.play.service.code.scanner)
     implementation(libs.kotlinx.coroutines.android)

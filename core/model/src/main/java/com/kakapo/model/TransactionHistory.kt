@@ -1,8 +1,8 @@
 package com.kakapo.model
 
 data class TransactionHistory(
-    val id: Int,
-    val amount: String,
-    val accountName: String,
-    val merchantName: String,
+    val id: String = "",
+    val amount: Int = 0,
+    val accountName: String = "",
+    val merchantName: String = "",
 )

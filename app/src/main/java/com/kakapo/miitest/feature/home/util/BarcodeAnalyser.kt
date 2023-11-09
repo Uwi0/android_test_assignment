@@ -10,7 +10,7 @@ import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
 
 class BarcodeAnalyser(
-    val callback: () -> Unit
+    private val onQrCodeScanned: (String) -> Unit
 ) : ImageAnalysis.Analyzer {
     @OptIn(ExperimentalGetImage::class) override fun analyze(imageProxy: ImageProxy) {
         val options = BarcodeScannerOptions.Builder()
@@ -25,12 +25,12 @@ class BarcodeAnalyser(
             scanner.process(image)
                 .addOnSuccessListener { barcodes ->
                     if (barcodes.size > 0) {
-                        callback()
+                        val barcode = barcodes.first()
+                        onQrCodeScanned.invoke(barcode?.rawValue ?: "Error Barcode is Null")
                     }
                 }
                 .addOnFailureListener {
-                    // Task failed with an exception
-                    // ...
+                    onQrCodeScanned.invoke(it.message ?: "Error")
                 }
         }
         imageProxy.close()

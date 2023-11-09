@@ -3,7 +3,7 @@ package com.kakapo.miitest.feature.home
 import com.kakapo.model.TransactionHistory
 
 data class HomeUiState(
-    val initialBalance: Int = 10000,
+    val initialBalance: Int = 1000000,
     val transactionHistories: List<TransactionHistory> = emptyList(),
     val isDialogVisible: Boolean = false,
     val scannedCode: String = ""
