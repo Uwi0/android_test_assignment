@@ -21,6 +21,7 @@ dependencies {
 
     implementation(project(":core:common"))
     implementation(project(":core:model"))
+    implementation(project(":core:test"))
 
     implementation(libs.firebase.bom)
     implementation(libs.coil.kt)

@@ -1,6 +1,8 @@
 package com.kakapo.network.di
 
+import com.kakapo.network.datasource.base.PortfolioRemoteDatasource
 import com.kakapo.network.datasource.base.PromoApiRemoteDataSource
+import com.kakapo.network.datasource.impl.FakePortfolioRemoteDatasourceImpl
 import com.kakapo.network.datasource.impl.PromoApiRemoteDataSourceImpl
 import dagger.Binds
 import dagger.Module
@@ -15,6 +17,11 @@ interface RemoteDatasourceModule {
     fun bindPromoRemoteDatasource(
         datasource: PromoApiRemoteDataSourceImpl
     ): PromoApiRemoteDataSource
+
+    @Binds
+    fun bindFakePortfolioRemoteDatasource(
+        datasource: FakePortfolioRemoteDatasourceImpl
+    ): PortfolioRemoteDatasource
 
 
 }

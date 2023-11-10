@@ -1,6 +1,8 @@
 package com.kakapo.data.di
 
+import com.kakapo.data.repository.base.PortfolioRepository
 import com.kakapo.data.repository.base.PromoRepository
+import com.kakapo.data.repository.impl.PortfolioRepositoryImpl
 import com.kakapo.data.repository.impl.PromoRepositoryImpl
 import dagger.Binds
 import dagger.Module
@@ -15,4 +17,9 @@ interface RepositoryModule {
     fun bindPromoRepository(
         repository: PromoRepositoryImpl
     ): PromoRepository
+
+    @Binds
+    fun bindPortfolioRepository(
+        repository: PortfolioRepositoryImpl
+    ): PortfolioRepository
 }
